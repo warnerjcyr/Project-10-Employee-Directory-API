@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+        <title>Employee Directory API</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <header>
+            <div class="banner">
+            <div class="search_container">
+                <h1>EMPLOYEE DIRECTORY</h1>
+                <!-- search bar -->
+                <form action="index.html" method="post" class="employeeSearchForm">
+                <input id="search" method="post" name="search">
+                    <button id="submit" type="submit" name="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+                    </button>
+                    <button id="clear" type="reset" name="reset" tabindex="2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        </button>
+                </form>
+                <!-- /search bar -->
+            </div>
+                </div>
+                    </header>
+            <main>
+                <div class="wrapper" id="employees">
+                    <!-- employee ajax html -->
+                </div>
+            </main>
+                <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/api.js"></script>
+    </body>
+</html>

@@ -1,0 +1,354 @@
+/****** BASIC STYLES ******/
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)) fixed, url("../images/office.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+}
+
+body {
+    height: 100%;
+    padding-top: 45px;
+    background-color: #04082e;
+    color: #282f33;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-family: "Noto Serif", serif;
+}
+
+/****** HEADER, EMPLOYEE SEARCH ******/
+
+header {
+    height: 30%;
+    min-height: 10em;
+    text-align: center;
+}
+
+header h1 {
+    color: #fcfcfc;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-family: "Ramabhadra", sans-serif;
+    font-weight: 400;
+}
+
+header .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header form {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header form input {
+    color: #282f33;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-family: "Noto Serif", serif;
+}
+
+header .searchContainer {
+    width: 100%;
+    max-width: 430px; }
+
+.employeeSearchForm {
+    width: 80%;
+    min-width: 300px;
+    border: 2px solid #fcfcfc;
+    background-color: rgba(4, 8, 46, .5);
+}
+
+.employeeSearchForm input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0 .5em;
+    color: #fcfcfc;
+}
+
+.employeeSearchForm button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 2px;
+    outline: none;
+}
+
+.employeeSearchForm button svg {
+    stroke: #fcfcfc;
+}
+
+/****** MAIN CONTENT ******/
+
+
+.wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.wrapper h3 {
+    color: #282f33;
+    font-size: 1.2em;
+    line-height: 1.5;
+    font-family: "Ramabhadra", sans-serif;
+    font-weight: 400;
+}
+
+.wrapper span {
+    font-size: .9em;
+}
+
+/****** AJAX HTML STYLES ******/
+
+.employeeList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.employeeList li {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 1.2em;
+    margin-bottom: 2em;
+}
+
+.employee {
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.employee {
+    background-color: rgba(255, 255, 255, .9);
+    border-style: solid;
+    border-color: rgba(201, 174, 104, 0.5);
+    border-width: 3px;
+    border-radius: 7px;
+}
+
+.employee h3:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    content: '';
+    display: block;
+    height: .35em;
+    transition: .3s ease-in-out;
+}
+
+.employee:hover h3:after {
+    background: rgba(201, 174, 104, 0.5);
+}
+
+.employeeImage img {
+    max-width: 128px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+
+.employeeInfo {
+    width: 80%;
+    padding: 0 0 0 1em;
+}
+
+.employeeInfo h3 {
+    display: inline-block;
+    margin: 0;
+    position: relative;
+}
+
+.employeeInfo span {
+    word-wrap: break-word;
+    display: block;
+}
+
+.employeeInfo .username {
+    display: none;
+}
+
+.additionalInformation {
+    display: none;
+}
+
+/****** MODEL WINDOW POPUP ******/
+
+#modal {
+    color: #4a575e;
+}
+
+#modal h3 {
+    color: #282f33;
+    font-size: 1.4em;
+    line-height: 1.5;
+    font-family: "Ramabhadra", sans-serif;
+    font-weight: 400;
+}
+
+#modal .employeeInfo {
+    font-size: .85em;
+}
+                                                   
+#modal .additionalInformation {
+    line-height: 2;
+    font-size: .85em;
+}
+
+#modal {
+    position: relative;
+    background-color: #fcfcfc;
+    border-radius: 3px;
+    margin: 0 auto;
+    top: 10%;
+    width: 95%;
+    max-width: 30em;
+    text-align: center;
+    padding: 2em;
+}
+
+#modal .employeeImage {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#modal .employeeInfo {
+    margin: 0 auto;
+    padding: 0;
+}
+
+#modal .additionalInformation {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    border-top: 1px solid rgba(40, 47, 51, 0.1);
+}
+
+#modal .username {
+    display: block;
+}
+
+.navigation {
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.navigation svg {
+    stroke: rgba(40, 47, 51, 0.5);
+    transition: .3s ease-in-out;
+}
+
+.navigation:focus svg {
+    transform: scale(1.5);
+    stroke: #282f33;
+}
+
+.navigation:hover svg {
+    stroke: #282f33;
+}
+
+#previous {
+    left: 0;
+    top: 45%;
+}
+
+#next {
+    right: 0;
+    top: 45%;
+}
+
+#overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+/****** MEDIA QUIRIES ******/
+
+
+@media (min-width: 768px) {
+.employeeList li {
+    width: 46.5%;
+        }
+    
+#modal .employeeInfo {
+    font-size: .95em;
+    }
+    
+.wrapper {
+    margin-top: 1em;
+    }
+    
+#modal {
+    top: 20%; }
+}
+
+@media (min-width: 1024px) {
+.employeeList li {
+    width: 30%;
+    }
+    
+.wrapper {
+    margin-top: 1em;
+    max-width: 1500px;
+    }
+    
+.employeeList li {
+    margin-bottom: 2em;
+    }
+    
+.employeeInfo {
+    padding: 0 0 0 .5em;
+    }
+    
+#modal .additionalInformation {
+    font-size: .95em;
+    }
+}
+
+
+
+
+
+
+
+
+

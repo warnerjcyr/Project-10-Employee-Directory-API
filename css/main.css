@@ -35,6 +35,7 @@ header {
 header h1 {
     color: #fcfcfc;
     font-size: 1.8rem;
+    padding: 0 5px;
     line-height: 1.5;
     font-family: "Ramabhadra", sans-serif;
     font-weight: 400;
